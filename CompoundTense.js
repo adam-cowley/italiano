@@ -5,4 +5,4 @@ function CompoundTense(first_conjugation_prefix, first_conjugation /*..., second
     return this;
 }
 
-module.exports = CompoundTense
+module.exports = CompoundTense;

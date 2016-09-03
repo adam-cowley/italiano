@@ -32,29 +32,38 @@ Pronoun.prototype.returnTense = function(verb, tense) {
 	var conjugation = '';
 	var prefix = '';
 
-	//switch (ending) {
-	switch (verb.conjugation) {
-		//case 'are':
-		case 1:
-			conjugation = this.getTense(tense).first_conjugation;
-			prefix = this.getTense(tense).first_conjugation_prefix || '';
-			break;
+	var tense = this.getTense(tense);
 
-		case 2:
-			conjugation = this.getTense(tense).second_conjugation;
-			break;
+	if ( tense instanceof CompoundTense ) {
+		conjugation = tense.first_conjugation;
+		prefix = tense.first_conjugation_prefix;
+	}
+	else {
+		//switch (ending) {
+		switch (verb.conjugation) {
+			//case 'are':
+			case 1:
+				conjugation = tense.first_conjugation;
+				prefix = tense.first_conjugation_prefix || '';
+				break;
 
-		case 3:
-			conjugation =
-				verb.conjugation_type == 1
-				? this.getTense(tense).third_conjugation_type_1
-				: this.getTense(tense).third_conjugation_type_2;
+			case 2:
+				conjugation = tense.second_conjugation;
+				break;
 
-			// If there is no third conjugation, use the second
-			if (!conjugation) {
-				conjugation = this.getTense(tense).second_conjugation;
-			}
-			break;
+			case 3:
+				conjugation =
+					verb.conjugation_type == 1
+					? tense.third_conjugation_type_1
+					: tense.third_conjugation_type_2;
+
+				// If there is no third conjugation, use the second
+
+				if (!conjugation) {
+					conjugation = tense.second_conjugation;
+				}
+				break;
+		}
 	}
 
 	conjugation = conjugation.replace('(er|ir)', er_ir);

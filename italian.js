@@ -403,11 +403,7 @@ console.log(she.verb(understand));
 console.log(it.verb(understand));
 
 
-
-
 /*
-
-
 
 var conjugations = {
 
