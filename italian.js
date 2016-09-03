@@ -96,34 +96,30 @@
 //    3) Loro hanno dormito troppo ieri
 //    4) Ho già mangiato
 
-var Pronoun = require('./Pronoun');
-
-
-// Singular
-
-;
-var he = new Pronoun('lui', 'a', 'e', 'e', 'isce');
-var she = new Pronoun('lei', 'a', 'e', 'e', 'isce');
-var it = new Pronoun('ci', 'a', 'e', 'e', 'isce');
-
-// Plural
-var we = new Pronoun('noi', 'iamo', 'iamo', 'iamo', 'isciamo');
-var you_plural = new Pronoun('voi', 'ate', 'ete','ite', 'ite');
-var they = new Pronoun('loro', 'ono', 'ono', 'ono', 'iscono');
-
 
 //var talk        = new Verb('parlare', 1);
-var arrive      = new Verb('arrivare', 1);
+//var arrive      = new Verb('arrivare', 1);
 //var see         = new Verb('vedere', 2);
-var finish      = new Verb('finire', 3, 2);
+//var finish      = new Verb('finire', 3, 2);
 //var sleep       = new Verb('dormire', 3, 1);
-var sell        = new Verb('vendere', 3, 2);
+//var sell        = new Verb('vendere', 3, 2);
 //var understand  = new Verb('capire', 3, 2);
 
 // Indicative Present =io parlo etc
 
-var i   = require('./pronouns/i'),
-    you = require('./pronons/you');
+var
+    // Singular
+    i   = require('./pronouns/i'),
+    you = require('./pronouns/you'),
+    he = require('./pronouns/he'),
+    she = require('./pronouns/she'),
+    it = require('./pronouns/it'),
+
+    // Plural
+    we = require('./pronouns/we'),
+    you_plural = require('./pronouns/you_plural'),
+    they = require('./pronouns/they')
+    ;
 
 // Inperfect Indicative
 i         ;
@@ -313,15 +309,17 @@ var tenses = [
     'gerund'
 
 ];
-var verbs = {
-    'To Talk': talk,
+var verbs = require('./verbs/index');
+
+//{
+    //'To Talk': talk,
     //'To See': see,
     //'To Sleep': sleep,
     //'To Understand': understand,
     //'To Sell': sell,
     //'To Finish': finish,
     //'To Arrive': arrive
-}
+//}
 
 
 for (var infinitive in verbs) {
@@ -454,33 +452,4 @@ console.log(conjugations.first(verbs.understand, pronouns.second)) // tu capisci
 console.log(conjugations.first(verbs.understand, pronouns.third.feminine)) // lei capisce
 
 
-
-
-
-
-
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

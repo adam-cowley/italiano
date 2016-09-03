@@ -11,4 +11,4 @@ var you = Pronoun.create('tu', 'i', 'i', 'o', 'isci')
     .addCompoundTense('presentPerfect', 'ha',     'ato',    '')
     .addCompoundTense('gerund', 'stai',   'ando',    '')
 
-module.exports = you
+module.exports = you;
