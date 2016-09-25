@@ -1,5 +1,5 @@
-var Pronoun = require('../Pronoun');
+var Pronoun = require('./Pronoun');
 
-you_plural = new Pronoun('voi', 'ate', 'ete','ite', 'ite');
+var you_plural = new Pronoun('voi', 'ate', 'ete','ite', 'ite');
 
 module.exports = you_plural;

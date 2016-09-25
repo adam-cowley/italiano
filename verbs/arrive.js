@@ -1,4 +1,4 @@
-var Verb = require('../Verb');
+var Verb = require('./Verb');
 
 var arrive = new Verb('arrivare', 1)
 

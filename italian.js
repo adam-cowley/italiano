@@ -97,13 +97,6 @@
 //    4) Ho già mangiato
 
 
-//var talk        = new Verb('parlare', 1);
-//var arrive      = new Verb('arrivare', 1);
-//var see         = new Verb('vedere', 2);
-//var finish      = new Verb('finire', 3, 2);
-//var sleep       = new Verb('dormire', 3, 1);
-//var sell        = new Verb('vendere', 3, 2);
-//var understand  = new Verb('capire', 3, 2);
 
 // Indicative Present =io parlo etc
 
@@ -124,60 +117,60 @@ var
 // Inperfect Indicative
 i         ;
 you       ;
-he        .addTense('past', 'ava',   'eva',   'iva');
-she       .addTense('past', 'ava',   'eva',   'iva');
-it        .addTense('past', 'ava',   'eva',   'iva');
-we        .addTense('past', 'avamo', 'avamo', 'ivamo');
+he        ;
+she       ;
+it        ;
+we        ;
 you_plural.addTense('past', 'avate', 'evate', 'ivate');
 they      .addTense('past', 'avano', 'evano', 'ivano');
 
 // future invicative/past absolute
 i
 you       ; // & /ette
-he        .addTense('pastAbsolute', 'ò',     'è',     'ì');
-she       .addTense('pastAbsolute', 'ò',     'è',     'ì');
-it        .addTense('pastAbsolute', 'ò',     'è',     'ì');
-we        .addTense('pastAbsolute', 'ammo',  'emmo',  'immo');
+he        ;
+she       ;
+it        ;
+we        ;
 you_plural.addTense('pastAbsolute', 'aste',  'este',  'iste');
 they      .addTense('pastAbsolute', 'arono', 'erono', 'irono'); //-ettero
 
 // indicative future
 i         ;
 you       ;
-he        .addTense('futureSimple', 'erà',    '(er|ir)à');
-she       .addTense('futureSimple', 'erà',    '(er|ir)à');
-it        .addTense('futureSimple', 'erà',    '(er|ir)à');
-we        .addTense('futureSimple', 'eremo',  '(er|ir)emo');
+he        ;
+she       ;
+it        ;
+we        ;
 you_plural.addTense('futureSimple', 'erete',  '(er|ir)ete');
 they      .addTense('futureSimple', 'eranno', '(er|ir)anno');
 
 // conditional present - i would talk
 i         ;
 you       ;
-he        .addTense('conditional', 'erebbe',   '(er|ir)ebbe');
-she       .addTense('conditional', 'erebbe',   '(er|ir)ebbe');
-it        .addTense('conditional', 'erebbe',   '(er|ir)ebbe');
-we        .addTense('conditional', 'eremmo',   '(er|ir)emmo');
+he        ;
+she       ;
+it        ;
+we        ;
 you_plural.addTense('conditional', 'ereste',   '(er|ir)este');
 they      .addTense('conditional', 'erebbero', '(er|ir)ebbero');
 
 // Subjunctive Present
 i
 you       ;
-he        .addTense('subjunctive', 'i',    'a',    'a',    'isca');
-she       .addTense('subjunctive', 'i',    'a',    'a',    'isca');
-it        .addTense('subjunctive', 'i',    'a',    'a',    'isca');
-we        .addTense('subjunctive', 'iamo', 'iamo', 'iamo', 'iamo');
+he        ;
+she       ;
+it        ;
+we        ;
 you_plural.addTense('subjunctive', 'iate', 'iate', 'iate', 'iate');
 they      .addTense('subjunctive', 'ino',  'ano',  'ano',  'iscano');
 
 // Imperfect Subjunctive
 i         ;
 you       ;
-he        .addTense('imperfectSubjunctive', 'asse',    'esse',    'isse');
-she       .addTense('imperfectSubjunctive', 'asse',    'esse',    'isse');
-it        .addTense('imperfectSubjunctive', 'asse',    'esse',    'isse');
-we        .addTense('imperfectSubjunctive', 'assimo',  'essimo',  'issimo');
+he        ;
+she       ;
+it        ;
+we        ;
 you_plural.addTense('imperfectSubjunctive', 'aste',    'este',    'iste');
 they      .addTense('imperfectSubjunctive', 'assero',  'essero',  'issero');
 
@@ -228,10 +221,10 @@ venire/to come
 
 i         ;
 you       ;
-he        .addCompoundTense('presentPerfect', 'ha',     'ato',    '');
-she       .addCompoundTense('presentPerfect', 'ha',     'ato',    '');
-it        .addCompoundTense('presentPerfect', 'è',      'ato',    '');
-we        .addCompoundTense('presentPerfect', 'abbiamo','ato',    '');
+he        ;
+she       ;
+it        ;
+we        ;
 you_plural.addCompoundTense('presentPerfect', 'avete',  'ato',    '');
 they      .addCompoundTense('presentPerfect', 'avevano','ato',    '');
 
@@ -239,10 +232,10 @@ they      .addCompoundTense('presentPerfect', 'avevano','ato',    '');
 // Gerund
 i         ;
 you       ;
-he        .addCompoundTense('gerund', 'sta',    'ando',    '');
-she       .addCompoundTense('gerund', 'sta',    'ando',    '');
-it        .addCompoundTense('gerund', 'sta',    'ando',    '');
-we        .addCompoundTense('gerund', 'siamo',  'ando',    '');
+he        ;
+she       ;
+it        ;
+we        ;
 you_plural.addCompoundTense('gerund', 'siete',  'ando',    '');
 they      .addCompoundTense('gerund', 'stanno', 'ando',    '');
 
@@ -290,10 +283,12 @@ var he = {
 */
 
 var pronouns = [
-    i,
+    // i,
     // you,
     // he,
-    // we,
+    // she,
+    // it,
+    we,
     // you_plural,
     // they
 ];

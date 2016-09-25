@@ -1,4 +1,4 @@
-var Verb = require('../Verb');
+var Verb = require('./Verb');
 
 var sleep = new Verb('dormire', 2);
 

@@ -1,5 +1,4 @@
-var Pronoun = require('../Pronoun');
-
+var Pronoun = require('./Pronoun');
 
 var you = Pronoun.create('tu', 'i', 'i', 'o', 'isci')
     .addTense('past', 'avi',   'evi',   'ivi')

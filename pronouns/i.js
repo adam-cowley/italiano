@@ -1,4 +1,4 @@
-var Pronoun = require('../Pronoun');
+var Pronoun = require('./Pronoun');
 
 var i = Pronoun.create('io', 'o', 'o', 'o', 'isco')
     .addTense('past', 'avo',   'evo',   'ivo')

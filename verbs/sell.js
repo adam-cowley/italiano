@@ -1,4 +1,4 @@
-var Verb = require('../Verb');
+var Verb = require('./Verb');
 
 var sell = new Verb('vendere', 3, 2);
 

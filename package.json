@@ -1,4 +1,7 @@
 {
   "name": "italiano",
-  "author": "Adam Cowley <italiano@adamcowley.co.uk>"
+  "author": "Adam Cowley <italiano@adamcowley.co.uk>",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
 }

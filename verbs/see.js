@@ -1,4 +1,4 @@
-var Verb = require('../Verb');
+var Verb = require('./Verb');
 
 var see = new Verb('vedere', 2);
 
