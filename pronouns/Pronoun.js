@@ -15,8 +15,8 @@ Pronoun.prototype.addTense = function(tense, first_conjugation, second_conjugati
 	return this;
 }
 
-Pronoun.prototype.addCompoundTense = function(tense, first_conjugation_prefix, first_conjugation) {
-	this.tenses[tense] = new CompoundTense(first_conjugation_prefix, first_conjugation);
+Pronoun.prototype.addCompoundTense = function(tense, first_conjugation_prefix, first_conjugation, second_conjugation, third_conjugation) {
+	this.tenses[tense] = new CompoundTense(first_conjugation_prefix, first_conjugation, second_conjugation, third_conjugation);
 
 	return this;
 }
@@ -35,35 +35,34 @@ Pronoun.prototype.returnTense = function(verb, tense) {
 	var tense = this.getTense(tense);
 
 	if ( tense instanceof CompoundTense ) {
-		conjugation = tense.first_conjugation;
+	// 	conjugation = tense.first_conjugation;
 		prefix = tense.first_conjugation_prefix;
 	}
-	else {
-		//switch (ending) {
-		switch (verb.conjugation) {
-			//case 'are':
-			case 1:
-				conjugation = tense.first_conjugation;
-				prefix = tense.first_conjugation_prefix || '';
-				break;
 
-			case 2:
+
+	switch (verb.conjugation) {
+		//case 'are':
+		case 1:
+			conjugation = tense.first_conjugation;
+			prefix = tense.first_conjugation_prefix || '';
+			break;
+
+		case 2:
+			conjugation = tense.second_conjugation;
+			break;
+
+		case 3:
+			conjugation =
+				verb.conjugation_type == 1
+				? tense.third_conjugation_type_1
+				: tense.third_conjugation_type_2;
+
+			// If there is no third conjugation, use the second
+
+			if (!conjugation) {
 				conjugation = tense.second_conjugation;
-				break;
-
-			case 3:
-				conjugation =
-					verb.conjugation_type == 1
-					? tense.third_conjugation_type_1
-					: tense.third_conjugation_type_2;
-
-				// If there is no third conjugation, use the second
-
-				if (!conjugation) {
-					conjugation = tense.second_conjugation;
-				}
-				break;
-		}
+			}
+			break;
 	}
 
 	conjugation = conjugation.replace('(er|ir)', er_ir);
@@ -105,6 +104,9 @@ Pronoun.prototype.presentPerfect = function(verb) {
 	return this.returnTense(verb, 'presentPerfect');
 }
 
+Pronoun.prototype.am =
+Pronoun.prototype.are =
+Pronoun.prototype.is =
 Pronoun.prototype.gerund = function(verb) {
 	return this.returnTense(verb, 'gerund');
 }

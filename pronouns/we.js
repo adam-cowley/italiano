@@ -8,8 +8,8 @@ var we = new Pronoun('noi', 'iamo', 'iamo', 'iamo', 'isciamo')
     .addTense('subjunctive', 'iamo', 'iamo', 'iamo', 'iamo')
     .addTense('imperfectSubjunctive', 'assimo',  'essimo',  'issimo')
 
-    .addCompoundTense('presentPerfect', 'abbiamo','ato',    '')
-    .addCompoundTense('gerund', 'siamo',  'ando',    '')
+    .addCompoundTense('presentPerfect', 'abbiamo','ato',    'ito')
+    .addCompoundTense('gerund', 'siamo',  'ando',    'endo')
 
 
 module.exports = we;

@@ -7,7 +7,7 @@ var i = Pronoun.create('io', 'o', 'o', 'o', 'isco')
     .addTense('conditional', 'erei',     '(er|ir)ei')
     .addTense('subjunctive', 'i',    'a',    'a',    'isca')
     .addTense('imperfectSubjunctive', 'assi',    'essi',    'issi')
-    .addCompoundTense('presentPerfect', 'ho',     'ato',    '')
-    .addCompoundTense('gerund', 'sto',    'ando')
+    .addCompoundTense('presentPerfect', 'ho',   'ato', 'ito')
+    .addCompoundTense('gerund', 'sto', 'ando', 'endo');
 
 module.exports = i;

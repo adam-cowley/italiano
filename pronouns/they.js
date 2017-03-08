@@ -7,7 +7,7 @@ var they = new Pronoun('loro', 'ono', 'ono', 'ono', 'iscono')
     .addTense('conditional', 'erebbero', '(er|ir)ebbero')
     .addTense('subjunctive', 'ino',  'ano',  'ano',  'iscano')
     .addTense('imperfectSubjunctive', 'assero',  'essero',  'issero')
-    .addCompoundTense('presentPerfect', 'avevano','ato',    '')
-    .addCompoundTense('gerund', 'stanno', 'ando',    '');
+    .addCompoundTense('presentPerfect', 'avevano','ato',    'ito')
+    .addCompoundTense('gerund', 'stanno', 'ando',    'endo');
 
 module.exports = they;

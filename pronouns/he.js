@@ -7,7 +7,7 @@ var he = new Pronoun('lui', 'a', 'e', 'e', 'isce')
     .addTense('conditional', 'erebbe',   '(er|ir)ebbe')
     .addTense('subjunctive', 'i',    'a',    'a',    'isca')
     .addTense('imperfectSubjunctive', 'asse',    'esse',    'isse')
-    .addCompoundTense('presentPerfect', 'ha',     'ato',    '')
-    .addCompoundTense('gerund', 'sta',    'ando',    '')
+    .addCompoundTense('presentPerfect', 'ha',     'ato',    'ito')
+    .addCompoundTense('gerund', 'sta',    'ando',    'endo');
 
 module.exports = he;

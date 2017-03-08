@@ -293,28 +293,21 @@ var pronouns = [
     they
 ];
 var tenses = [
-    // 'present',
-    // 'past',
-    // 'pastAbsolute',
-    // 'futureSimple',
+    'present',
+    'past',
+    'pastAbsolute',
+    'futureSimple',
     'conditional',
-    // 'subjunctive',
-    // 'imperfectSubjunctive',
-    // 'presentPerfect',
-    // 'gerund'
+    'subjunctive',
+    'imperfectSubjunctive',
+    'presentPerfect',
+    'gerund'
 
 ];
 var verbs = require('./verbs/index');
 
-//{
-    //'To Talk': talk,
-    //'To See': see,
-    //'To Sleep': sleep,
-    //'To Understand': understand,
-    //'To Sell': sell,
-    //'To Finish': finish,
-    //'To Arrive': arrive
-//}
+
+verbs = {understand:verbs.understand}
 
 
 for (var infinitive in verbs) {
@@ -331,6 +324,10 @@ for (var infinitive in verbs) {
     });
 
 }
+
+
+
+
 
 
 /*
@@ -397,3 +394,4 @@ console.log(he.verb(understand));
 console.log(she.verb(understand));
 console.log(it.verb(understand));
 
+*/
