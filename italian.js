@@ -121,8 +121,8 @@ he        ;
 she       ;
 it        ;
 we        ;
-you_plural.addTense('past', 'avate', 'evate', 'ivate');
-they      .addTense('past', 'avano', 'evano', 'ivano');
+you_plural;
+they      ;
 
 // future invicative/past absolute
 i
@@ -131,8 +131,8 @@ he        ;
 she       ;
 it        ;
 we        ;
-you_plural.addTense('pastAbsolute', 'aste',  'este',  'iste');
-they      .addTense('pastAbsolute', 'arono', 'erono', 'irono'); //-ettero
+you_plural;
+they      ; //-ettero
 
 // indicative future
 i         ;
@@ -141,8 +141,8 @@ he        ;
 she       ;
 it        ;
 we        ;
-you_plural.addTense('futureSimple', 'erete',  '(er|ir)ete');
-they      .addTense('futureSimple', 'eranno', '(er|ir)anno');
+you_plural;
+they      ;
 
 // conditional present - i would talk
 i         ;
@@ -151,8 +151,8 @@ he        ;
 she       ;
 it        ;
 we        ;
-you_plural.addTense('conditional', 'ereste',   '(er|ir)este');
-they      .addTense('conditional', 'erebbero', '(er|ir)ebbero');
+you_plural;
+they      ;
 
 // Subjunctive Present
 i
@@ -161,8 +161,8 @@ he        ;
 she       ;
 it        ;
 we        ;
-you_plural.addTense('subjunctive', 'iate', 'iate', 'iate', 'iate');
-they      .addTense('subjunctive', 'ino',  'ano',  'ano',  'iscano');
+you_plural;
+they      ;
 
 // Imperfect Subjunctive
 i         ;
@@ -171,8 +171,8 @@ he        ;
 she       ;
 it        ;
 we        ;
-you_plural.addTense('imperfectSubjunctive', 'aste',    'este',    'iste');
-they      .addTense('imperfectSubjunctive', 'assero',  'essero',  'issero');
+you_plural;
+they      ;
 
 
 /*
@@ -225,8 +225,8 @@ he        ;
 she       ;
 it        ;
 we        ;
-you_plural.addCompoundTense('presentPerfect', 'avete',  'ato',    '');
-they      .addCompoundTense('presentPerfect', 'avevano','ato',    '');
+you_plural;
+they      ;
 
 
 // Gerund
@@ -236,8 +236,8 @@ he        ;
 she       ;
 it        ;
 we        ;
-you_plural.addCompoundTense('gerund', 'siete',  'ando',    '');
-they      .addCompoundTense('gerund', 'stanno', 'ando',    '');
+you_plural;
+they      ;
 
 
 /*
@@ -283,25 +283,25 @@ var he = {
 */
 
 var pronouns = [
-    // i,
-    // you,
-    // he,
-    // she,
-    // it,
+    i,
+    you,
+    he,
+    she,
+    it,
     we,
-    // you_plural,
-    // they
+    you_plural,
+    they
 ];
 var tenses = [
-    'present',
-    'past',
-    'pastAbsolute',
-    'futureSimple',
+    // 'present',
+    // 'past',
+    // 'pastAbsolute',
+    // 'futureSimple',
     'conditional',
-    'subjunctive',
-    'imperfectSubjunctive',
-    'presentPerfect',
-    'gerund'
+    // 'subjunctive',
+    // 'imperfectSubjunctive',
+    // 'presentPerfect',
+    // 'gerund'
 
 ];
 var verbs = require('./verbs/index');
@@ -397,50 +397,3 @@ console.log(he.verb(understand));
 console.log(she.verb(understand));
 console.log(it.verb(understand));
 
-
-/*
-
-var conjugations = {
-
-    first: function(verb, pronoun) {
-        var ending = verb.infinitive.substr(-3);
-
-        switch (ending) {
-            case 'are':
-                return 'o';
-
-            case 'ere':
-                return 'o';
-
-            case 'ire':
-                return verb.infinitive.replace(ending, '') + pronoun.ending;
-
-        }
-    },
-    second: function(infinitive) {
-        var ending = infinitive.substr(-3);
-
-        switch (ending) {
-            case 'are':
-                return 'i';
-
-        }
-    },
-    third: function(infinitive) {
-        var ending = infinitive.substr(-3);
-
-        switch (ending) {
-            case 'are':
-                return 'i';
-
-        }
-    }
-}
-
-
-console.log(conjugations.first(verbs.understand, pronouns.first)) // io capisco
-console.log(conjugations.first(verbs.understand, pronouns.second)) // tu capisci
-console.log(conjugations.first(verbs.understand, pronouns.third.feminine)) // lei capisce
-
-
-*/

@@ -14,5 +14,5 @@ module.exports = {
    september: new Month('settembre'),
    october: new Month('ottobre'),
    november: new Month('novembre'),
-   december: new Month('dicembre')r
+   december: new Month('dicembre')
 };
